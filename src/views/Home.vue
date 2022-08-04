@@ -13,8 +13,9 @@
       <van-grid-item v-for="(item,index) in channel" :key="index" :icon="item.iconUrl" :text="item.name" />
     </van-grid>
     <!--团购专区-->
-    <van-cell title="团购专区" is-link value="更多内容" />
+    
     <div>
+      <van-cell title="团购专区" is-link value="更多内容" />
       <!--变量名|过滤器-->
       <van-card
         v-for="(item,index) in grouponlist"
@@ -30,7 +31,17 @@
           </template>
         </van-card>
     </div>
-  </div>
+    <!--品牌商直供-->
+      <div>
+        <van-cell title="品牌商直供" is-link value="更多品牌商" />
+        <van-grid :column-num="2">
+          <van-grid-item v-for="(item,index) in brandList" :key="index">
+          <img :src="item.picUrl" style="width: 80%;"/>
+          <div>{{item.name}}</div>
+          </van-grid-item>
+        </van-grid>
+      </div>
+    </div>
 </template>
 
 <script>
@@ -150,7 +161,37 @@ export default {
       "grouponMember": 12,
       "expireTime": "2022-01-31 00:00:00"
     }
-  ]
+  ],
+    brandList:[
+                  {
+                      "id": 1001000,
+                      "name": "MUJI制造商",
+                      "desc": "严选精选了MUJI制造商和生产原料，\n用几乎零利润的价格，剔除品牌溢价，\n让用户享受原品牌的品质生活。",
+                      "picUrl": "http://yanxuan.nosdn.127.net/1541445967645114dd75f6b0edc4762d.png",
+                      "floorPrice": 12.9
+                  },
+                  {
+                      "id": 1001002,
+                      "name": "内野制造商",
+                      "desc": "严选从世界各地挑选毛巾，最终选择了为日本内野代工的工厂，追求毛巾的柔软度与功能性。品质比肩商场几百元的毛巾。",
+                      "picUrl": "http://yanxuan.nosdn.127.net/8ca3ce091504f8aa1fba3fdbb7a6e351.png",
+                      "floorPrice": 29
+                  },
+                  {
+                      "id": 1001003,
+                      "name": "Adidas制造商",
+                      "desc": "严选找到为Adidas等品牌制造商，\n选取优质原材料，与厂方一起设计，\n为你提供好的理想的运动装备。",
+                      "picUrl": "http://yanxuan.nosdn.127.net/335334d0deaff6dc3376334822ab3a2f.png",
+                      "floorPrice": 49
+                  },
+                  {
+                      "id": 1001007,
+                      "name": "优衣库制造商",
+                      "desc": "严选找到日本知名服装UNIQLO的制造商，\n选取优质长绒棉和精梳工艺，\n与厂方一起设计，为你提供理想的棉袜。",
+                      "picUrl": "http://yanxuan.nosdn.127.net/0d72832e37e7e3ea391b519abbbc95a3.png",
+                      "floorPrice": 29
+                  }
+              ]
     };
   },
   created(){
