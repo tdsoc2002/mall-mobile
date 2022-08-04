@@ -105,3 +105,36 @@ ViewModel  View  Model
 - html只定义页面结构
 - js准备数据
 - vue可以把数据加载(渲染)到html中
+
+
+## axios和mockjs
+
+- axios
+
+  axios可以用来发送异步请求调用后端接口.
+
+  - 安装axios
+
+    ```
+    npm install axios -S
+    ```
+
+  - utils/request.js
+
+  - api/api.js
+
+  - 在需要调用接口的地方引入
+
+- mockjs
+
+  mockjs核心功能： 能快速生成模拟数据；能拦截ajax请求。
+
+  - 安装mockjs
+
+    ```
+    npm install mockjs -D
+    ```
+
+  - api/mock.js
+
+  - 在main.js中引入

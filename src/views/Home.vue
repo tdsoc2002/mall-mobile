@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import {getHome} from'@/api/api.js'
+
 export default {
   data() {
     return {
@@ -54,6 +56,12 @@ export default {
     ]
     };
   },
+  created(){
+    //发送请求，获取首页数据
+    getHome().then(resp=>{
+      console.info(resp)
+    })
+  }
 };
 </script>
 
