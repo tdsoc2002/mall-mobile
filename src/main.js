@@ -6,11 +6,15 @@ import '@/assets/reset.css'
 import Vant from'vant'//引入组件 所有
 import 'vant/lib/index.css';
 import '@/assets/iconfont/iconfont.css'
-
-import '@/api/mock'//导入Mock
+import  * as filters from'@/filter'//引入过滤器
+import'@/api/mock'//导入Mock
 
 Vue.use(Vant);//注册组件
-Vue.config.productionTip = false
+Vue.config.productionTip = true
+//引入所有过滤器
+Object.keys(filters).forEach(key=>{
+  Vue.filter(key,filters[key])
+})
 
 new Vue({
   router,

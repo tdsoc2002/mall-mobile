@@ -138,3 +138,10 @@ ViewModel  View  Model
   - api/mock.js
 
   - 在main.js中引入
+
+## 过滤器
+
+过滤器可以对数据进行过滤处理，返回处理后的数据.
+
+- filter/index.js
+- main.js引入注册
