@@ -1,7 +1,10 @@
 <template>
   <div class="app">
-    <!--路由组件加载位置-->
-    <router-view></router-view>
+    <!--路由组件加载位置 transition加载动画-->
+    <transition enter-active-class="animate__bounceIn animate__animated" mode="out-in">
+      <router-view></router-view>
+    </transition>
+    
     <!--底部导航栏 $route指的是当前被加载的路由配置对象-->
     <Tabbar v-if="$route.meta.showTab"/>
   </div>

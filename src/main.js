@@ -8,6 +8,7 @@ import 'vant/lib/index.css';
 import '@/assets/iconfont/iconfont.css'
 import  * as filters from'@/filter'//引入过滤器
 import'@/api/mock'//导入Mock
+import 'animate.css'//引入动画样式
 
 Vue.use(Vant);//注册组件
 Vue.config.productionTip = true
