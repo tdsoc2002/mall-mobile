@@ -10,3 +10,18 @@ export function getHome(){
         method:'get'
     });
 }
+//分类数据1
+export function getCategory(){
+    return request({
+        url:'/category/index',
+        method:'get'
+    });
+}
+
+//分类数据2 - 不启用
+export function getCurrentCategory(index){
+    return request({
+        url:'/api/category?id='+index,
+        method:'get'
+    });
+}
