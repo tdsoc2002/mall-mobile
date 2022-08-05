@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <van-search placeholder="搜索" />
+  <div class="animate__animated">
+      <van-search placeholder="搜索" />
   </div>
 </template>
 
