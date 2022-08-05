@@ -1,7 +1,7 @@
 <template>
   <div class="home-style">
     <!--搜索框-->
-    <van-search v-model="value" placeholder="搜索" />
+    <SearchBar/>
     <!--轮播图-->
     <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
         <van-swipe-item v-for="(bn,index) in banner" :key="index">
@@ -46,6 +46,7 @@
 
 <script>
 import {getHome} from'@/api/api.js'
+import SearchBar from '@/components/SearchBar.vue';
 
 export default {
   data() {
@@ -199,6 +200,9 @@ export default {
     getHome().then(resp=>{
       console.info(resp)
     })
+  },
+  components:{
+    SearchBar
   }
 };
 </script>

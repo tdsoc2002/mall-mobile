@@ -1,7 +1,7 @@
 <template>
   <div>
     <!--搜索框-->
-    <van-search v-model="value" placeholder="搜索" />
+    <SearchBar/>
     <!--左侧边栏 @监听事件-->
     <van-sidebar class="fl" style="height:100%" @change="sidebarChange" v-model="index">
       <van-sidebar-item v-for="(item,index) in categoryInfos.categoryList" :key="index" :title="item.name" />
@@ -25,6 +25,9 @@
 
 <script>
 import {getCategory} from '@/api/api'
+//引用组件
+import SearchBar from '@/components/SearchBar.vue'
+
 export default {
   data(){
     return{
@@ -48,6 +51,9 @@ export default {
         console.info(index)
         this.index=index
     }
+  },
+  components:{
+    SearchBar
   }
 }
 </script>

@@ -2,8 +2,8 @@
   <div class="app">
     <!--路由组件加载位置-->
     <router-view></router-view>
-    <!--底部导航栏-->
-    <Tabbar/>
+    <!--底部导航栏 $route指的是当前被加载的路由配置对象-->
+    <Tabbar v-if="$route.meta.showTab"/>
   </div>
 </template>
 
